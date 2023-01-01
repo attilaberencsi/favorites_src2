@@ -1,0 +1,62 @@
+{
+    "groups": [
+        {
+            "title": "FIORI",
+            "expanded" : true,
+            "tiles": [
+                {
+                    "header": "SAPUI5",
+                    "subheader": "SAP",
+                    "url": "https://sapui5.hana.ondemand.com",
+                    "headerImage": "https://sapui5.hana.ondemand.com/resources/sap/ui/documentation/sdk/images/logo_ui5.png"
+                },
+                {
+                    "header": "OpenUI5",
+                    "subheader": "Community",
+                    "url": "https://openui5.org/",
+                    "headerImage": "https://camo.githubusercontent.com/41c45bf1c9fb94a7accd2275641af57fb9000c2ca4cf01ae33c821e0d2f2d679/687474703a2f2f6f70656e7569352e6f72672f696d616765732f4f70656e5549355f6e65775f6269675f736964652e706e67",
+                    "appShortcut" : "SHORTCUT",
+                    "systemInfo" : "SYSTEMINFO"
+
+                }
+            ],
+            "links": [
+                {
+                    "header": "Support",
+                    "subheader": "SAP",
+                    "url": "https://launchpad.support.sap.com"
+                },
+                {
+                    "header": "Design Guidelines",
+                    "subheader": "SAP",
+                    "url": "https://experience.sap.com/fiori-design/"
+                }                
+            ]
+        },
+        {
+            "title": "ABAP",
+            "expanded" : true,
+            "tiles": [
+                {
+                    "header": "Keyword",
+                    "subheader": "Documentation",
+                    "url": "https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-US/index.htm",
+                    "headerImage": "sap-icon://sap-logo-shape"
+                },
+                {
+                    "header": "RAP",
+                    "subheader": "Community",
+                    "url": "https://community.sap.com/topics/abap/rap",
+                    "headerImage": "sap-icon://sap-logo-shape"
+                }
+            ],
+            "links": [
+                {
+                    "header": "Core Data Services for ABAP",
+                    "subheader": "SAP Press",
+                    "url": "https://www.sap-press.com/core-data-services-for-abap_5294/"
+                }
+            ]
+        }
+    ]
+}
