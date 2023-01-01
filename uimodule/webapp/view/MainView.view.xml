@@ -3,8 +3,8 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:layout="sap.ui.layout"
 	xmlns:core="sap.ui.core">
-	<App id="app" backgroundImage="../resources/img/bg.jpg" backgroundOpacity="1">
-		<Page id="idFavPage" showHeader="false" backgroundDesign="Transparent" backgroundRepeat="true">
+	<App id="app" backgroundImage="../resources/img/bg.jpg" backgroundOpacity="1" backgroundRepeat="true">
+		<Page id="idFavPage" showHeader="false" backgroundDesign="Transparent">
 			<List id="idGroupLists" items="{path: 'favorites>/groups', templateShareable:true}" backgroundDesign="Transparent">
 				<items>
 					<CustomListItem>
