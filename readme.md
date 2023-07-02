@@ -2,6 +2,7 @@
 
 Static UI5 app for developer favorites. Implemented in VSCode using easy-ui5 yeoman generator templates.
 
+Live site here: https://attilaberencsi.github.io/favorites2/
 
 ![Favorites App](./resources/FavoritesApp.png?raw=true "Favorites App")
 
