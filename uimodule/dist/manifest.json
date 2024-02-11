@@ -41,7 +41,7 @@
       "id": "idAppControl"
     },
     "dependencies": {
-      "minUI5Version": "1.109.3",
+      "minUI5Version": "1.120.6",
       "libs": {
         "sap.ui.core": {},
         "sap.m": {"lazy": false},
