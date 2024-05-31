@@ -1,6 +1,93 @@
 {
     "groups": [
         {
+            "title": "ABAP",
+            "expanded": false,
+            "tiles": [
+                {
+                    "header": "Clean ABAP",
+                    "subheader": "SAP",
+                    "url": "https://github.com/SAP-samples/abap-cheat-sheets/tree/main",
+                    "headerImage": "sap-icon://syntax"
+                },
+                {
+                    "header": "ABAP Cheat Sheets",
+                    "subheader": "SAP",
+                    "url": "https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md",
+                    "headerImage": "sap-icon://syntax"
+                },
+                {
+                    "header": "ABAP Open Source Projects",
+                    "url": "https://dotabap.org/",
+                    "headerImage": "https://dotabap.org/logos/dotabap_logo.svg"
+                },
+                {
+                    "header": "RAP",
+                    "subheader": "Community",
+                    "url": "https://community.sap.com/topics/abap/rap",
+                    "headerImage": "sap-icon://sap-logo-shape"
+                },
+                {
+                    "header": "RAP Showcase",
+                    "subheader": "Fiori Elements",
+                    "url": "https://github.com/SAP-samples/abap-platform-fiori-feature-showcase",
+                    "headerImage": "sap-icon://sap-logo-shape"
+                },
+                {
+                    "header": "RAP Feature List",
+                    "subheader": "by Version",
+                    "url": "https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenrap_feature_table.htm",
+                    "headerImage": "sap-icon://sap-logo-shape"
+                },
+                {
+                    "header": "ABAP CDS Feature List",
+                    "subheader": "by Version",
+                    "url": "https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abencds_language_elements.htm",
+                    "headerImage": "sap-icon://sap-logo-shape"
+                },
+                {
+                    "header": "ABAP CDS Feature Matrix",
+                    "subheader": "by Version",
+                    "url": "https://community.sap.com/t5/application-development-blog-posts/feature-matrix-data-modeling-with-abap-core-data-services/ba-p/13543592",
+                    "headerImage": "sap-icon://sap-logo-shape"
+                },
+                {
+                    "header": "ABAP Cloud FAQ",
+                    "url": "https://attilaberencsi.github.io/christmaseve/",
+                    "headerImage": "sap-icon://cloud"
+                },
+                {
+                    "header": "Software Components",
+                    "url": "https://help.sap.com/docs/btp/sap-business-technology-platform/software-component-lifecycle-management?locale=en-US",
+                    "headerImage": "sap-icon://inventory",
+                    "appShortcut": "gCTS",
+                    "systemInfo": "BTP ABAP"
+                }
+            ],
+            "links": [
+                {
+                    "header": "ABAPGit",
+                    "url": "https://github.com/marketplace/abaplint",
+                    "headerImage": "https://git-scm.com/images/logo@2x.png"
+                },
+                {
+                    "header": "ABAPLint",
+                    "url": "https://abaplint.org/",
+                    "headerImage": "https://abaplint.org/img/abaplint.svg"
+                },
+                {
+                    "header": "ABAP CI Plugin",
+                    "subheader": "Eclipse",
+                    "url": "https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/LATEST/en-US/2002380aeda84875a5fae4adc66b3fdb.html"
+                },
+                {
+                    "header": "ADT Handbook",
+                    "subheader": "DSAG",
+                    "url": "resources/doc/Handbook_ADT_Eclipse.pdf"
+                }
+            ]
+        },
+        {
             "title": "FIORI",
             "expanded": true,
             "tiles": [
@@ -29,7 +116,7 @@
                     "subheader": "V4",
                     "url": "https://github.com/SAP-samples/fiori-elements-feature-showcase",
                     "headerImage": "sap-icon://sap-box"
-                },                                                
+                },
                 {
                     "header": "FE Flexible Programming",
                     "subheader": "Explorer",
@@ -179,91 +266,6 @@
                 }
             ],
             "links": []
-        },
-        {
-            "title": "ABAP",
-            "expanded": false,
-            "tiles": [
-                {
-                    "header": "Clean ABAP",
-                    "subheader": "SAP",
-                    "url": "https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md",
-                    "headerImage": "sap-icon://syntax"
-                },
-                {
-                    "header": "ABAP Open Source Projects",
-                    "url": "https://dotabap.org/",
-                    "headerImage": "https://dotabap.org/logos/dotabap_logo.svg"
-                },
-                {
-                    "header": "RAP",
-                    "subheader": "Community",
-                    "url": "https://community.sap.com/topics/abap/rap",
-                    "headerImage": "sap-icon://sap-logo-shape"
-                },
-                {
-                    "header": "RAP Showcase",
-                    "subheader": "Fiori Elements",
-                    "url": "https://github.com/SAP-samples/abap-platform-fiori-feature-showcase",
-                    "headerImage": "sap-icon://sap-logo-shape"                                
-                },
-                {
-                    "header": "RAP Feature List",
-                    "subheader": "by Version",
-                    "url": "https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenrap_feature_table.htm",
-                    "headerImage": "sap-icon://sap-logo-shape"                                
-                },
-                {
-                    "header": "ABAP CDS Feature List",
-                    "subheader": "by Version",
-                    "url": "https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abencds_language_elements.htm",
-                    "headerImage": "sap-icon://sap-logo-shape"                                
-                },
-                {
-                    "header": "ABAP CDS Feature Matrix",
-                    "subheader": "by Version",
-                    "url": "https://community.sap.com/t5/application-development-blog-posts/feature-matrix-data-modeling-with-abap-core-data-services/ba-p/13543592",
-                    "headerImage": "sap-icon://sap-logo-shape"                                
-                },                      
-                {
-                    "header": "ABAP Cloud FAQ",
-                    "url": "https://attilaberencsi.github.io/christmaseve/",
-                    "headerImage": "sap-icon://cloud"                      
-                },                      
-                {
-                    "header": "Software Components",
-                    "url": "https://help.sap.com/docs/btp/sap-business-technology-platform/software-component-lifecycle-management?locale=en-US",
-                    "headerImage": "sap-icon://inventory",
-                    "appShortcut": "gCTS",
-                    "systemInfo": "BTP ABAP"                                         
-                }                
-                
-                
-                
-
-            ],
-            "links": [
-                {
-                    "header": "ABAPGit",
-                    "url": "https://github.com/marketplace/abaplint",
-                    "headerImage": "https://git-scm.com/images/logo@2x.png"
-                },
-                {
-                    "header": "ABAPLint",
-                    "url": "https://abaplint.org/",
-                    "headerImage": "https://abaplint.org/img/abaplint.svg"
-                },                
-                {
-                    "header": "ABAP CI Plugin",
-                    "subheader": "Eclipse",
-                    "url": "https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/LATEST/en-US/2002380aeda84875a5fae4adc66b3fdb.html"
-                },                                
-                {
-                    "header": "ADT Handbook",
-                    "subheader": "DSAG",
-                    "url": "resources/doc/Handbook_ADT_Eclipse.pdf"
-                }                
-            ]
         },
         {
             "title": "DOORS",
