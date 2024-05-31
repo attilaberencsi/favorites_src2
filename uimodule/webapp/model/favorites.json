@@ -5,13 +5,13 @@
             "expanded": false,
             "tiles": [
                 {
-                    "header": "Clean ABAP",
+                    "header": "ABAP Cheat Sheets",
                     "subheader": "SAP",
                     "url": "https://github.com/SAP-samples/abap-cheat-sheets/tree/main",
                     "headerImage": "sap-icon://syntax"
                 },
                 {
-                    "header": "ABAP Cheat Sheets",
+                    "header": "Clean ABAP",
                     "subheader": "SAP",
                     "url": "https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md",
                     "headerImage": "sap-icon://syntax"
