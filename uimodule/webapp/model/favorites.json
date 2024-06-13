@@ -2,7 +2,7 @@
     "groups": [
         {
             "title": "ABAP",
-            "expanded": false,
+            "expanded": true,
             "tiles": [
                 {
                     "header": "ABAP Cheat Sheets",
@@ -39,6 +39,18 @@
                     "url": "https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenrap_feature_table.htm",
                     "headerImage": "sap-icon://sap-logo-shape"
                 },
+                {
+                    "header": "RAP",
+                    "subheader": "What's New",
+                    "url": "https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/40bb1ba88c1e4139896fd7550c76654f.html?locale=en-US",
+                    "headerImage": "sap-icon://sap-logo-shape"
+                },
+                {
+                    "header": "ADT",
+                    "subheader": "What's New",
+                    "url": "https://help.sap.com/docs/ABAP_PLATFORM_NEW/4726775c8bfc483abb210252604515b2/e9b10e43016e423ab0efe91e668a6efc.html?locale=en-US",
+                    "headerImage": "sap-icon://sap-logo-shape"
+                },     
                 {
                     "header": "ABAP CDS Feature List",
                     "subheader": "by Version",
@@ -89,7 +101,7 @@
         },
         {
             "title": "FIORI",
-            "expanded": true,
+            "expanded": false,
             "tiles": [
                 {
                     "header": "UI5",
