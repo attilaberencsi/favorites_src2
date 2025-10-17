@@ -17,6 +17,12 @@
                     "headerImage": "sap-icon://syntax"
                 },
                 {
+                    "header": "ABAP Data Models",
+                    "subheader": "SAP",
+                    "url": "https://help.sap.com/docs/abap-cloud/abap-data-models/abap-data-models?locale=en-US?version=sap_btp",
+                    "headerImage": "sap-icon://tree"
+                },
+                {
                     "header": "ABAP Open Source Projects",
                     "url": "https://dotabap.org/",
                     "headerImage": "https://dotabap.org/logos/dotabap_logo.svg"
@@ -25,12 +31,6 @@
                     "header": "RAP",
                     "subheader": "Community",
                     "url": "https://community.sap.com/topics/abap/rap",
-                    "headerImage": "sap-icon://sap-logo-shape"
-                },
-                {
-                    "header": "RAP Showcase",
-                    "subheader": "Fiori Elements",
-                    "url": "https://github.com/SAP-samples/abap-platform-fiori-feature-showcase",
                     "headerImage": "sap-icon://sap-logo-shape"
                 },
                 {
@@ -50,7 +50,7 @@
                     "subheader": "What's New",
                     "url": "https://help.sap.com/docs/ABAP_PLATFORM_NEW/4726775c8bfc483abb210252604515b2/e9b10e43016e423ab0efe91e668a6efc.html?locale=en-US",
                     "headerImage": "sap-icon://sap-logo-shape"
-                },     
+                },
                 {
                     "header": "ABAP CDS Feature List",
                     "subheader": "by Version",
@@ -78,6 +78,39 @@
             ],
             "links": [
                 {
+                    "header": "Clean core extensibility",
+                    "subheader": "S/4HANA Cloud",
+                    "url": "https://www.sap.com/documents/2024/09/20aece06-d87e-0010-bca6-c68f7e60039b.html"
+                },
+                {
+                    "header": "ABAP Extensibility Guide",
+                    "subheader": "Level Concept",
+                    "url": "https://community.sap.com/t5/technology-blog-posts-by-sap/abap-extensibility-guide-clean-core-for-sap-s-4hana-cloud-august-2025/ba-p/14175399"
+                },
+                {
+                    "header": "Extensibility Explorer",
+                    "subheader": "S/4HANA Cloud",
+                    "url": "https://extensibilityexplorer.cfapps.eu10.hana.ondemand.com/ExtensibilityExplorer/"
+                },
+                {
+                    "header": "Cloudification Repository Viewer",
+                    "url": "https://github.com/SAP/abap-atc-cr-cv-s4hc"
+                },
+                {
+                    "header": "Cloudification Repository Viewer",
+                    "subheader": "Successor Search",
+                    "url": "https://software-heroes.com/en/cloudification-repository-viewer"
+                },
+                {
+                    "header": "RAP Transactional Model",
+                    "subheader": "SAP LUW",
+                    "url": "https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/ccda1094b0f845e28b88f9f50a68dfc4.html?locale=en-US&version=LATEST"
+                },
+                {
+                    "header": "Controlled SAP LUW",
+                    "url": "https://help.sap.com/docs/abap-cloud/abap-concepts/controlled-sap-luw"
+                },
+                {
                     "header": "ABAPGit",
                     "url": "https://github.com/marketplace/abaplint",
                     "headerImage": "https://git-scm.com/images/logo@2x.png"
@@ -88,6 +121,11 @@
                     "headerImage": "https://abaplint.org/img/abaplint.svg"
                 },
                 {
+                    "header": "ABAP API Definitions",
+                    "subheader": "abapedia",
+                    "url": "https://abapedia.org"
+                },
+                {
                     "header": "ABAP CI Plugin",
                     "subheader": "Eclipse",
                     "url": "https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/LATEST/en-US/2002380aeda84875a5fae4adc66b3fdb.html"
@@ -96,6 +134,16 @@
                     "header": "ADT Handbook",
                     "subheader": "DSAG",
                     "url": "resources/doc/Handbook_ADT_Eclipse.pdf"
+                },
+                {
+                    "header": "BTP ABAP Environment",
+                    "subheader": "Getting Started",
+                    "url": "https://help.sap.com/docs/btp/sap-business-technology-platform/getting-started-with-customer-account-in-abap-environment?locale=en-US"
+                },
+                {
+                    "header": "APAB Platform",
+                    "subheader": "Hands-on Workshops",
+                    "url": "https://github.com/SAP-samples/abap-platform-rap-workshops/tree/main"
                 }
             ]
         },
@@ -124,10 +172,28 @@
                     "headerImage": "sap-icon://sap-box"
                 },
                 {
+                    "header": "UI Development",
+                    "url": "https://help.sap.com/docs/sap-btp-abap-environment/abap-environment/ui-development-overview?locale=en-US&version=LATEST",
+                    "systemInfo": "BTP ABAP"
+                },
+                {
+                    "header": "Fiori Tools",
+                    "subheader": "User Guide",
+                    "url": "https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/f09752ebcf63473e9194ea29ca232e56.html?locale=en-US&version=LATEST"
+                },
+                {
+                    "header": "FE Feature Showcase",
+                    "subheader": "V4",
+                    "url": "https://github.com/SAP-samples/abap-platform-fiori-feature-showcase",
+                    "headerImage": "sap-icon://sap-logo-shape",
+                    "appShortcut": "RAP"
+                },
+                {
                     "header": "FE Feature Showcase",
                     "subheader": "V4",
                     "url": "https://github.com/SAP-samples/fiori-elements-feature-showcase",
-                    "headerImage": "sap-icon://sap-box"
+                    "headerImage": "sap-icon://sap-box",
+                    "appShortcut": "CAP"
                 },
                 {
                     "header": "FE Flexible Programming",
@@ -275,6 +341,13 @@
                     "subheader": "Developer's Guide",
                     "url": "https://help.sap.com/docs/btp/btp-developers-guide/what-is-btp-developers-guide",
                     "headerImage": "sap-icon://hint"
+                },
+                {
+                    "header": "Solution Diagrams",
+                    "subheader": "draw.io",
+                    "url": "https://sap.github.io/btp-solution-diagrams/docs/solution_diagr_intro/intro/",
+                    "headerImage": "sap-icon://draw-rectangle",
+                    "systemInfo": "BTP"
                 }
             ],
             "links": []
@@ -341,6 +414,12 @@
                     "header": "SAP Press",
                     "subheader": "<3",
                     "url": "https://www.sap-press.com",
+                    "headerImage": "sap-icon://e-learning"
+                },
+                {
+                    "header": "Learning",
+                    "subheader": "SAP",
+                    "url": "https://learning.sap.com/",
                     "headerImage": "sap-icon://e-learning"
                 },
                 {
