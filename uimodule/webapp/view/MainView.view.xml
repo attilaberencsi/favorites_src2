@@ -16,6 +16,18 @@
 			showHeader="false"
 			backgroundDesign="Transparent"
 		>
+			<VBox
+				id="idSearchVBox"
+				class="sapUiResponsiveMargin"
+			>
+				<SearchField
+					id="idSearchField"
+					placeholder="Search by title or description..."
+					search="onSearch"
+					liveChange="onSearchLiveChange"
+					width="100%"
+				/>
+			</VBox>
 			<List
 				id="idGroupsList"
 				items="{
