@@ -20,6 +20,9 @@ sap.ui.define([
       // Store reference to the original data for filtering
       let favoritesModel = this.getOwnerComponent().getModel("favorites");
       this.originalGroups = JSON.parse(JSON.stringify(favoritesModel.getProperty("/groups")));
+      
+      // Load theme from local storage and apply it
+      this.loadThemeFromStorage();
     },
     /**
      * Click on the tile
@@ -211,6 +214,64 @@ sap.ui.define([
         if (group.title !== groupId) {
           group.expanded = false;
         }
+      }
+    },
+
+    /**
+     * Handle theme toggle switch change
+     * @param {*} oEvent Toggle event
+     */
+    onThemeToggle: function (oEvent) {
+      let bState = oEvent.getParameter("state");
+      let sTheme = bState ? "sap_horizon" : "sap_horizon_dark";
+      this.applyTheme(sTheme);
+      this.saveThemeToStorage(sTheme);
+    },
+
+    /**
+     * Apply theme to the application
+     * @param {*} sTheme Theme name
+     */
+    applyTheme: function (sTheme) {
+      sap.ui.getCore().applyTheme(sTheme);
+      
+      // Manage background based on theme
+      let oApp = this.getView().byId("idApp");
+      if (sTheme === "sap_horizon") {
+        // Apply light background for light theme
+        oApp.setBackgroundImage("resources/img/bgLight.jpg");
+      } else if (sTheme === "sap_horizon_dark") {
+        // Apply dark background for dark theme
+        oApp.setBackgroundImage("resources/img/bg.jpg");
+      }
+    },
+
+    /**
+     * Save theme to browser local storage
+     * @param {*} sTheme Theme name
+     */
+    saveThemeToStorage: function (sTheme) {
+      localStorage.setItem("com.sapdev.eu.favorites.theme", sTheme);
+    },
+
+    /**
+     * Load theme from browser local storage and apply it
+     */
+    loadThemeFromStorage: function () {
+      let sTheme = localStorage.getItem("com.sapdev.eu.favorites.theme");
+      let oSwitch = this.getView().byId("idThemeSwitch");
+      
+      if (sTheme) {
+        this.applyTheme(sTheme);
+        // Set switch state based on loaded theme
+        if (sTheme === "sap_horizon") {
+          oSwitch.setState(true);
+        } else {
+          oSwitch.setState(false);
+        }
+      } else {
+        // Default to dark theme if no saved preference
+        oSwitch.setState(false);
       }
     }
 

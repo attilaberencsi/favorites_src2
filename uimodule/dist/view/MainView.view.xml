@@ -16,6 +16,31 @@
 			showHeader="false"
 			backgroundDesign="Transparent"
 		>
+			<VBox
+				id="idSearchVBox"
+				class="sapUiResponsiveMargin"
+			>
+				<HBox
+					id="idSearchBox"
+					alignItems="Center"
+					justifyContent="SpaceBetween"
+				>
+					<SearchField
+						id="idSearchField"
+						placeholder="Search by Title or SubTitle..."
+						search="onSearch"
+						liveChange="onSearchLiveChange"
+						width="100%"
+					/>
+					<Switch
+						id="idThemeSwitch"
+						change="onThemeToggle"
+						state="false"
+						customTextOn="Light"
+						customTextOff="Dark"
+					/>
+				</HBox>
+			</VBox>
 			<List
 				id="idGroupsList"
 				items="{
@@ -82,7 +107,7 @@
 											subheader="{favorites>subheader}"
 											press="onPress(${favorites>url})"
 											mode="LineMode"
-											class="sapUiTinyMarginBegin"
+											class="sapUiTinyMarginBegin sapUiTinyMarginTop"
 										/>
 									</layout:HorizontalLayout>
 								</layout:VerticalLayout>
