@@ -1,18 +1,30 @@
 # Favorites
 
-Static UI5 app for developer favorites. Implemented in VSCode using easy-ui5 yeoman generator templates.
+Static UI5 app for developer favorites. Implemented in VSCode starting with easy-ui5 yeoman generator template, then adding some code with fun.
 
-Live site here: https://attilaberencsi.github.io/favorites2/
+Live site here: [https://attilaberencsi.github.io/favorites2/](https://attilaberencsi.github.io/favorites2/)
 
-![Favorites App](./resources/FavoritesApp.png?raw=true "Favorites App")
+![Preview](resources/image/1766350797225.png)
 
 ## Usage
 
 Add your favorite links to the [uimodule/model/favorites.json](uimodule/webapp/model/favorites.json) file.
 
-    -   You can define Tile Groups with a Title, which are rendered below each other
-    -   You can set the Group collapsed/expanded by default
-    -   You can define Tiles with Icons inside the group
-    -   You can define Quicklinks without icons
+## Build
 
-To change background, replace [uimodule/resources/img/bg.jpg](uimodule/webapp/resources/img/bg.jpg) file.
+`npm run build:ui`
+
+### Deploy
+
+Upload content of the `dist` folder to a web server like GitHub pages (github.io)
+
+## Features
+
+- Define Tile Groups with a Title, which are rendered below each other
+- Sets the Group collapsed/expanded by default
+- Define Tiles with Icons inside the group
+- Define Quicklinks without icons
+- Search capability, filters Groups and Tiles by Title and Subtitle
+- Theme Switcher: Dark / Light
+
+To change background, replace [uimodule/resources/img/bg.jpg](uimodule/webapp/resources/img/bg.jpg) and [uimodule/resources/img/bgLight.jpg](uimodule/webapp/resources/img/bgLight.jpg) files.
