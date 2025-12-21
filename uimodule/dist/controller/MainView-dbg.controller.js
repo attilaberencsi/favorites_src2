@@ -15,13 +15,7 @@ sap.ui.define([
      * Setup
      * @override
      */
-    onInit: function () {
-      this.suspendPanelEvents = false;
-      // Store reference to the original data for filtering
-      let favoritesModel = this.getOwnerComponent().getModel("favorites");
-      this.originalGroups = JSON.parse(JSON.stringify(favoritesModel.getProperty("/groups")));
-      
-      // Load theme from local storage and apply it
+    onInit: function () {      // Load theme from local storage and apply it
       this.loadThemeFromStorage();
     },
     /**
@@ -69,14 +63,14 @@ sap.ui.define([
       let oTileFilter = new Filter({
         test: (tile) => {
           return (tile.header && tile.header.toLowerCase().includes(sSearchValue)) ||
-                 (tile.subheader && tile.subheader.toLowerCase().includes(sSearchValue));
+            (tile.subheader && tile.subheader.toLowerCase().includes(sSearchValue));
         }
       });
 
       let oLinkFilter = new Filter({
         test: (link) => {
           return (link.header && link.header.toLowerCase().includes(sSearchValue)) ||
-                 (link.subheader && link.subheader.toLowerCase().includes(sSearchValue));
+            (link.subheader && link.subheader.toLowerCase().includes(sSearchValue));
         }
       });
 
@@ -86,7 +80,7 @@ sap.ui.define([
         if (group.tiles) {
           for (let tile of group.tiles) {
             if ((tile.header && tile.header.toLowerCase().includes(sSearchValue)) ||
-                (tile.subheader && tile.subheader.toLowerCase().includes(sSearchValue))) {
+              (tile.subheader && tile.subheader.toLowerCase().includes(sSearchValue))) {
               return true;
             }
           }
@@ -96,7 +90,7 @@ sap.ui.define([
         if (group.links) {
           for (let link of group.links) {
             if ((link.header && link.header.toLowerCase().includes(sSearchValue)) ||
-                (link.subheader && link.subheader.toLowerCase().includes(sSearchValue))) {
+              (link.subheader && link.subheader.toLowerCase().includes(sSearchValue))) {
               return true;
             }
           }
@@ -234,7 +228,7 @@ sap.ui.define([
      */
     applyTheme: function (sTheme) {
       sap.ui.getCore().applyTheme(sTheme);
-      
+
       // Manage background based on theme
       let oApp = this.getView().byId("idApp");
       if (sTheme === "sap_horizon") {
@@ -260,7 +254,7 @@ sap.ui.define([
     loadThemeFromStorage: function () {
       let sTheme = localStorage.getItem("com.sapdev.eu.favorites.theme");
       let oSwitch = this.getView().byId("idThemeSwitch");
-      
+
       if (sTheme) {
         this.applyTheme(sTheme);
         // Set switch state based on loaded theme
