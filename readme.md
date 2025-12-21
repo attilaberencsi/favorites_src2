@@ -12,7 +12,7 @@ Live site here: [https://attilaberencsi.github.io/favorites2/](https://attilaber
 - Sets the Group collapsed/expanded by default
 - Define Tiles with Icons inside the group
 - Define Quicklinks without icons
-- Search capability, filters Groups and Tiles by Title and Subtitle
+- Search capability: filters Tiles by Title and Subtitle
 - Theme Switcher: Dark / Light
 
 ## Usage
