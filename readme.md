@@ -6,18 +6,6 @@ Live site here: [https://attilaberencsi.github.io/favorites2/](https://attilaber
 
 ![Preview](resources/image/1766350797225.png)
 
-## Usage
-
-Add your favorite links to the [uimodule/model/favorites.json](uimodule/webapp/model/favorites.json) file.
-
-## Build
-
-`npm run build:ui`
-
-### Deploy
-
-Upload content of the `dist` folder to a web server like GitHub pages (github.io)
-
 ## Features
 
 - Define Tile Groups with a Title, which are rendered below each other
@@ -26,5 +14,21 @@ Upload content of the `dist` folder to a web server like GitHub pages (github.io
 - Define Quicklinks without icons
 - Search capability, filters Groups and Tiles by Title and Subtitle
 - Theme Switcher: Dark / Light
+
+## Usage
+
+Download this reporitory as ZIP.
+
+Configure your favorite links to the [uimodule/model/favorites.json](uimodule/webapp/model/favorites.json) file.
+
+## Build
+
+`npm run build:ui`
+
+## Deploy
+
+Upload content of the `dist` folder to a web server like GitHub pages (github.io)
+
+## Customization
 
 To change background, replace [uimodule/resources/img/bg.jpg](uimodule/webapp/resources/img/bg.jpg) and [uimodule/resources/img/bgLight.jpg](uimodule/webapp/resources/img/bgLight.jpg) files.
