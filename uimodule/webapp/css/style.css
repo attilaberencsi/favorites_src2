@@ -1,4 +1,33 @@
+.sapUiBody {
+    --favorites-app-bg-image: url("resources/img/bg.jpg");
+    --favorites-surface-rgb: 255, 255, 255;
+    --favorites-surface-alpha: 0.7;
+}
+
+.sapUiBody.sapFavoritesLight {
+    --favorites-app-bg-image: url("resources/img/bgLight.jpg");
+    --favorites-surface-rgb: 255, 255, 255;
+    --favorites-surface-alpha: 0.7;
+}
+
+.sapUiBody.sapFavoritesDark {
+    --favorites-app-bg-image: url("resources/img/bg.jpg");
+    --favorites-surface-rgb: 0, 0, 0;
+    --favorites-surface-alpha: 0.7;
+}
+
+#idApp {
+    background-image: var(--favorites-app-bg-image) !important;
+    background-repeat: repeat !important;
+    background-size: cover !important;
+}
+
 .sapMPanelHdr {    
     font-size: 1.5rem;
     text-align: center;
+    background-color: rgba(var(--favorites-surface-rgb), var(--favorites-surface-alpha)) !important;
+}
+
+.sapMGT {
+    background-color: rgba(var(--favorites-surface-rgb), var(--favorites-surface-alpha)) !important;
 }
