@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700&display=swap");
+
 .sapUiBody {
     --favorites-app-bg-image: url("resources/img/bg.jpg");
     --favorites-surface-rgb: 255, 255, 255;
     --favorites-surface-alpha: 0.7;
+    --favorites-font-body: "Exo 2", "Segoe UI", sans-serif;
+    --favorites-font-tech: "Orbitron", "Exo 2", sans-serif;
+    font-family: var(--favorites-font-body);
 }
 
 .sapUiBody.sapFavoritesLight {
@@ -20,14 +25,47 @@
     background-image: var(--favorites-app-bg-image) !important;
     background-repeat: repeat !important;
     background-size: cover !important;
+    font-family: var(--favorites-font-body);
 }
 
 .sapMPanelHdr {    
     font-size: 1.5rem;
     text-align: center;
     background-color: rgba(var(--favorites-surface-rgb), var(--favorites-surface-alpha)) !important;
+    font-family: var(--favorites-font-tech);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .sapMGT {
     background-color: rgba(var(--favorites-surface-rgb), var(--favorites-surface-alpha)) !important;
+    font-family: var(--favorites-font-body);
+}
+
+.sapMGT .sapMGTHeaderText,
+.sapMGT .sapMGTSubHdrTxt,
+.sapMGT .sapMGTSubheaderText,
+.sapMGT .sapMGTContent,
+.sapMGT .sapMGTTitle,
+.sapMGT .sapMGTSubTitle,
+.sapMGT .sapMGTSubHdr,
+.sapMGT .sapMGTText,
+.sapMGT [class*="sapMGTSub"] {
+    font-family: var(--favorites-font-tech) !important;
+    letter-spacing: 0.05em;
+}
+
+.sapMGT .sapMGTSubHdrTxt,
+.sapMGT .sapMGTSubHdrTxt > .sapMText {
+    display: -webkit-box !important;
+    white-space: normal !important;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1.25em;
+    max-height: 2.5em;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
