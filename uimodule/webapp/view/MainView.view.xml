@@ -33,6 +33,13 @@
 						liveChange="onSearchLiveChange"
 						width="100%"
 					/>
+					<Link
+						id="idSapdeveuLink"
+						class="favoritesExternalLink"
+						text="sapdev.eu"
+						href="https://www.sapdev.eu/"
+						target="_blank"
+					/>
 					<Switch
 						id="idThemeSwitch"
 						change="onThemeToggle"

@@ -49,6 +49,89 @@
     color: inherit !important;
 }
 
+.favoritesExternalLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0 0.9rem;
+    border-radius: 0.5rem;
+    background: rgba(var(--favorites-surface-rgb), var(--favorites-surface-alpha)) !important;
+    background-color: rgba(var(--favorites-surface-rgb), var(--favorites-surface-alpha)) !important;
+    box-shadow: none;
+    text-decoration: none;
+    font-family: var(--favorites-font-tech);
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    align-self: center;
+    line-height: 1;
+    border: 1px solid rgba(var(--favorites-surface-rgb), 0.55) !important;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 0 18px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16);
+    position: relative;
+    overflow: hidden;
+    -webkit-backdrop-filter: blur(7px) saturate(1.2);
+    backdrop-filter: blur(7px) saturate(1.2);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.05) 45%, rgba(0, 0, 0, 0.08));
+}
+
+.favoritesExternalLink::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.22), transparent 45%);
+    opacity: 0.9;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.favoritesExternalLink.sapMLnk {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.favoritesExternalLink .sapMLnkText {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    font-size: 1.15rem;
+    line-height: 1;
+    vertical-align: middle;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.18);
+}
+
+.sapUiBody.sapFavoritesDark .favoritesExternalLink {
+    color: #ffffff !important;
+}
+
+.sapUiBody.sapFavoritesLight .favoritesExternalLink {
+    color: #111111 !important;
+}
+
+.favoritesExternalLink:hover,
+.favoritesExternalLink:focus {
+    text-decoration: underline;
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(var(--favorites-surface-rgb), 0.9) !important;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.16),
+        0 0 26px rgba(0, 0, 0, 0.32),
+        0 0 14px rgba(255, 255, 255, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.favoritesExternalLink:hover::before,
+.favoritesExternalLink:focus::before {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
 .sapMPanelHdr {    
     font-size: 1.5rem;
     text-align: center;
