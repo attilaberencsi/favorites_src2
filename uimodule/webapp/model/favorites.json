@@ -141,7 +141,7 @@
                     "url": "https://help.sap.com/docs/btp/sap-business-technology-platform/getting-started-with-customer-account-in-abap-environment?locale=en-US"
                 },
                 {
-                    "header": "APAB Platform",
+                    "header": "ABAP Platform",
                     "subheader": "Hands-on Workshops",
                     "url": "https://github.com/SAP-samples/abap-platform-rap-workshops/tree/main"
                 }
@@ -358,6 +358,12 @@
                     "url": "https://help.sap.com/docs/btp/btp-developers-guide/what-is-btp-developers-guide",
                     "headerImage": "sap-icon://hint"
                 },
+                {
+                    "header": "MTA Modules and Resources",
+                    "subheader": "Possible Parameter Values",
+                    "url": "https://help.sap.com/docs/btp/sap-business-technology-platform/parameters-and-properties?locale=en-US&version=LATEST",
+                    "headerImage": "sap-icon://hint"
+                },                
                 {
                     "header": "Solution Diagrams",
                     "subheader": "draw.io",
