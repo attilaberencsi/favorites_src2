@@ -27,10 +27,18 @@
 				>
 					<SearchField
 						id="idSearchField"
+						class="favoritesSearchField"
 						placeholder="Search by Title or SubTitle..."
 						search="onSearch"
 						liveChange="onSearchLiveChange"
 						width="100%"
+					/>
+					<Link
+						id="idSapdeveuLink"
+						class="favoritesExternalLink"
+						text="sapdev.eu"
+						href="https://www.sapdev.eu/"
+						target="_blank"
 					/>
 					<Switch
 						id="idThemeSwitch"

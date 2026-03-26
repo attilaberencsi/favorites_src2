@@ -11,16 +11,20 @@ sap.ui.define([
 
   return BaseController.extend("com.otisoft.favs.Favorites.controller.MainView", {
 
+    SURFACE_TRANSPARENCY: 0.7,
+
     /**
      * Setup
      * @override
      */
-    onInit: function () {      // Load theme from local storage and apply it
+    onInit: function () {
+      this.suspendPanelEvents = false;
+      sap.ui.getCore().attachThemeChanged(this._onThemeChanged, this);
       this.loadThemeFromStorage();
     },
     /**
      * Click on the tile
-     * @param {*} sUrl Favorite page link
+     * @param {string} sUrl Favorite page link
      */
     onPress: function (sUrl) {
       sap.m.URLHelper.redirect(sUrl, true);
@@ -217,32 +221,71 @@ sap.ui.define([
      */
     onThemeToggle: function (oEvent) {
       let bState = oEvent.getParameter("state");
-      let sTheme = bState ? "sap_horizon" : "sap_horizon_dark";
-      this.applyTheme(sTheme);
-      this.saveThemeToStorage(sTheme);
-    },
-
-    /**
-     * Apply theme to the application
-     * @param {*} sTheme Theme name
-     */
-    applyTheme: function (sTheme) {
-      sap.ui.getCore().applyTheme(sTheme);
-
-      // Manage background based on theme
-      let oApp = this.getView().byId("idApp");
-      if (sTheme === "sap_horizon") {
-        // Apply light background for light theme
-        oApp.setBackgroundImage("resources/img/bgLight.jpg");
-      } else if (sTheme === "sap_horizon_dark") {
-        // Apply dark background for dark theme
-        oApp.setBackgroundImage("resources/img/bg.jpg");
+      if (bState) {
+        this.applyLightTheme();
+        this.saveThemeToStorage("sap_horizon");
+      } else {
+        this.applyDarkTheme();
+        this.saveThemeToStorage("sap_horizon_dark");
       }
     },
 
     /**
+     * Apply the light theme to the application
+     */
+    applyLightTheme: function () {
+      sap.ui.getCore().applyTheme("sap_horizon");
+      this._applyThemeDecorations(true);
+    },
+
+    /**
+     * Apply the dark theme to the application
+     */
+    applyDarkTheme: function () {
+      sap.ui.getCore().applyTheme("sap_horizon_dark");
+      this._applyThemeDecorations(false);
+    },
+
+    /**
+     * Check whether a theme should use the light background variant
+     * @param {string} sTheme Theme name
+     * @returns {boolean} True for light themes
+     */
+    _isLightTheme: function (sTheme) {
+      return String(sTheme).toLowerCase().indexOf("dark") === -1;
+    },
+
+    /**
+     * Update UI decorations that depend on the active theme
+     * @param {boolean} bLightTheme Whether the light theme is active
+     */
+    _applyThemeDecorations: function (bLightTheme) {
+      let oApp = this.getView().byId("idApp");
+      let oBody = document.body;
+
+      if (!oBody) {
+        return;
+      }
+
+      if (oApp && oApp["setBackgroundImage"]) {
+        oApp["setBackgroundImage"](bLightTheme ? "resources/img/bgLight.jpg" : "resources/img/bg.jpg");
+      }
+
+      oBody.classList.toggle("sapFavoritesLight", bLightTheme);
+      oBody.classList.toggle("sapFavoritesDark", !bLightTheme);
+    },
+
+    /**
+     * React to runtime theme changes
+     */
+    _onThemeChanged: function () {
+      /** @type {string} */ let sTheme = sap.ui.getCore().getConfiguration().getTheme();
+      this._applyThemeDecorations(this._isLightTheme(sTheme));
+    },
+
+    /**
      * Save theme to browser local storage
-     * @param {*} sTheme Theme name
+     * @param {string} sTheme Theme name
      */
     saveThemeToStorage: function (sTheme) {
       localStorage.setItem("com.sapdev.eu.favorites.theme", sTheme);
@@ -255,16 +298,15 @@ sap.ui.define([
       let sTheme = localStorage.getItem("com.sapdev.eu.favorites.theme");
       let oSwitch = this.getView().byId("idThemeSwitch");
 
-      if (sTheme) {
-        this.applyTheme(sTheme);
-        // Set switch state based on loaded theme
-        if (sTheme === "sap_horizon") {
-          oSwitch.setState(true);
-        } else {
-          oSwitch.setState(false);
-        }
+      if (!sTheme) {
+        sTheme = sap.ui.getCore().getConfiguration().getTheme();
+      }
+
+      if (this._isLightTheme(sTheme)) {
+        this.applyLightTheme();
+        oSwitch.setState(true);
       } else {
-        // Default to dark theme if no saved preference
+        this.applyDarkTheme();
         oSwitch.setState(false);
       }
     }
