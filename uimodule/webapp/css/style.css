@@ -28,6 +28,27 @@
     font-family: var(--favorites-font-body);
 }
 
+.favoritesSearchField.sapMSF {
+    background: transparent !important;
+}
+
+.favoritesSearchField > .sapMSFF,
+.favoritesSearchField > .sapMSFF:hover,
+.favoritesSearchField.sapMFocus > .sapMSFF,
+.favoritesSearchField.sapMSF:not(.sapMSFDisabled):hover > .sapMSFF {
+    background: rgba(var(--favorites-surface-rgb), var(--favorites-surface-alpha)) !important;
+    background-color: rgba(var(--favorites-surface-rgb), var(--favorites-surface-alpha)) !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0.5rem !important;
+}
+
+.favoritesSearchField .sapMSFI {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
 .sapMPanelHdr {    
     font-size: 1.5rem;
     text-align: center;

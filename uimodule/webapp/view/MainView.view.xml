@@ -27,6 +27,7 @@
 				>
 					<SearchField
 						id="idSearchField"
+						class="favoritesSearchField"
 						placeholder="Search by Title or SubTitle..."
 						search="onSearch"
 						liveChange="onSearchLiveChange"
