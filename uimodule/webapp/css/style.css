@@ -1,3 +1,27 @@
+.sapFavoritesLight .favoritesExternalLink {
+    border: 1.5px solid rgba(var(--favorites-surface-rgb), 0.82) !important;
+    box-shadow:
+        0 0 0 1.5px rgba(255, 255, 255, 0.18),
+        0 0 22px 2px rgba(0, 0, 0, 0.10),
+        0 0 18px 2px rgba(255, 255, 255, 0.13),
+        inset 0 1.5px 0 rgba(255, 255, 255, 0.22);
+    background-image: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.09) 45%, rgba(0,0,0,0.04));
+}
+
+.sapFavoritesLight .favoritesExternalLink::before {
+    background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.28), transparent 50%);
+    opacity: 1;
+}
+
+.sapFavoritesLight .favoritesExternalLink:hover,
+.sapFavoritesLight .favoritesExternalLink:focus {
+    border-color: rgba(var(--favorites-surface-rgb), 0.98) !important;
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,0.22),
+        0 0 32px 4px rgba(0,0,0,0.13),
+        0 0 22px 4px rgba(255,255,255,0.18),
+        inset 0 2px 0 rgba(255,255,255,0.28);
+}
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700&display=swap");
 
 .sapUiBody {
