@@ -1,3 +1,6 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700&display=swap");
+
 .sapFavoritesLight .favoritesExternalLink {
     border: 1.5px solid rgba(var(--favorites-surface-rgb), 0.82) !important;
     box-shadow:
@@ -22,7 +25,6 @@
         0 0 22px 4px rgba(255,255,255,0.18),
         inset 0 2px 0 rgba(255,255,255,0.28);
 }
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700&display=swap");
 
 .sapUiBody {
     --favorites-app-bg-image: url("resources/img/bg.jpg");
